@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Avisos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Adicione um arquivo CSS para estilos personalizados -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #0c0c0cab;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px; /* Defina um valor máximo para o conteúdo */
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .theme {
+            background-color: #0c0b0b;
+            border: 1px solid #c9c9c9;
+            padding: 110px;
+            text-align: center;
+            transition: transform 0.2s ease;
+            width: 100%; /* Defina a largura desejada para os quadrados dos temas */
+            background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o quadro */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+        }
+
+        .theme:hover {
+            transform: scale(1.05);
+        }
+
+        .theme a {
+            display: block;
+            margin-top: 30px;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 20px;
+            border-radius: 5px;
+        }
+
+        /* Adicione imagens de fundo para cada tema */
+        .theme.ti {
+            background-image: url('ti_resized.png');
+            background-size: cover;
+        }
+
+        .theme.mecanica {
+            background-image: url('mecanica_resized.png');
+            background-size: cover;
+        }
+
+        .theme.compras {
+            background-image: url('compras_resized.png');
+            background-size: cover;
+        }
+
+        .theme.gestao {
+            background-image: url('gestao_resized.png');
+            background-size: cover;
+        }
+
+        .theme h2 {
+            font-size: 2em; /* Altere o valor conforme necessário */
+            background-color: rgba(255, 255, 255, 0.596);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media screen and (max-width: 768px) {
+            /* Estilos específicos para telas menores */
+            .theme h2 {
+                font-size: 1.5em; /* Reduza o tamanho da fonte para telas menores */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quadro de Avisos</h1>
+    </header>
+    <main>
+        <div class="column">
+            <section class="theme ti"> <!-- Adicione a classe do tema correspondente -->
+                <h2>TI</h2>
+                
+                <a href="avisos-ti.html">Ver Avisos</a>
+            </section>
+            <section class="theme mecanica"> <!-- Adicione a classe do tema correspondente -->
+                <h2>Mecânica</h2>
+               
+                <a href="avisos-mecanica.html">Ver Avisos</a>
+            </section>
+        </div>
+        <div class="column">
+            <section class="theme compras"> <!-- Adicione a classe do tema correspondente -->
+                <h2>Compras</h2>
+                
+                <a href="avisos-compras.html">Ver Avisos</a>
+            </section>
+            <section class="theme gestao"> <!-- Adicione a classe do tema correspondente -->
+                <h2>Gente e Gestão</h2>
+                
+                <a href="avisos-gentegestao.html">Ver Avisos</a>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
